@@ -189,7 +189,7 @@ export function buildDraftBoard(year: GameYear, formation: Formation = '4-3-3'):
       const rarityScore = (card: PlayerCard) => (card.rarity === 'icon' ? 2 : card.rarity === 'special' ? 1 : 0)
       return positionMatch || b.rating - a.rating || rarityScore(b) - rarityScore(a)
     })
-    return pickUnique(ranked.slice(0, 5), 5).map((card) => ({ slotIndex: index, card }))
+    return ranked.slice(0, 5).map((card) => ({ slotIndex: index, card }))
   })
 
   return {
