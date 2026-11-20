@@ -126,6 +126,7 @@ button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid
 .penalty-box.bottom-box, .goal-box.bottom-goal { bottom: -1px; border-bottom: 0; }
 .goal-box { width: 19%; height: 4%; }
 .pitch-line { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-evenly; gap: clamp(7px, 2vw, 23px); min-height: 75px; }
+.pitch-line:has(.slot-card.is-open) { z-index: 5; }
 .line-attack { margin-bottom: 2px; }
 .line-goalkeeper { min-height: 61px; }
 .slot-card { position: relative; width: clamp(94px, 11vw, 133px); flex: 0 1 133px; min-width: 0; animation: card-in .48s both; }
@@ -195,6 +196,7 @@ button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid
 .bench-heading > span { color: #9ca89f; font: 9px var(--mono); letter-spacing: .06em; }
 .bench-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
 .bench-grid .slot-card { width: auto; flex: initial; padding: 7px; border: 1px solid var(--line); border-radius: 9px; background: #111716; }
+.bench-grid .slot-card.is-open { z-index: 5; }
 .bench-grid .slot-toggle { min-height: 32px; padding: 3px; border-color: transparent; background: transparent; backdrop-filter: none; }
 .bench-grid .empty-card-art { height: 32px; margin-top: 3px; }
 .bench-grid .empty-card-art span { font-size: 14px; }
